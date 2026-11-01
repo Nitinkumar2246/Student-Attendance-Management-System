@@ -1,0 +1,478 @@
+/* ========================================
+   STUDENT ATTENDANCE MANAGEMENT SYSTEM
+   Complete CSS Styling
+======================================== */
+
+/* 1. Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f7fc;
+    color: #263238;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* 2. Common Links */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+/* 3. Navigation Bar */
+.navbar {
+    width: 100%;
+    min-height: 75px;
+    padding: 15px 7%;
+    background: #172554;
+    color: #ffffff;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 0.3px;
+}
+
+.navbar nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.navbar nav a {
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.navbar nav a:hover {
+    color: #93c5fd;
+}
+
+/* 4. Hero Section */
+.hero {
+    min-height: 480px;
+    padding: 80px 7%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    color: #ffffff;
+
+    background: linear-gradient(
+        135deg,
+        #1e3a8a,
+        #2563eb,
+        #38bdf8
+    );
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.hero h1 {
+    font-size: clamp(30px, 5vw, 48px);
+    line-height: 1.25;
+    margin-bottom: 22px;
+    font-weight: 800;
+}
+
+.hero p {
+    max-width: 700px;
+    margin: 0 auto 30px;
+    font-size: 18px;
+    color: #eff6ff;
+}
+
+/* 5. Buttons */
+.btn {
+    display: inline-block;
+    padding: 13px 28px;
+
+    background: #ffffff;
+    color: #1d4ed8;
+
+    border: 2px solid #ffffff;
+    border-radius: 8px;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: transparent;
+    color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* General button class for forms */
+button,
+.btn-primary {
+    padding: 11px 22px;
+    background: #2563eb;
+    color: #ffffff;
+
+    border: none;
+    border-radius: 6px;
+
+    font-weight: 600;
+    cursor: pointer;
+
+    transition: background 0.3s ease;
+}
+
+button:hover,
+.btn-primary:hover {
+    background: #1d4ed8;
+}
+
+/* 6. Features Section */
+.features {
+    padding: 65px 7%;
+    text-align: center;
+}
+
+.features h2 {
+    color: #172554;
+    font-size: 32px;
+    margin-bottom: 35px;
+}
+
+.feature-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.feature-card {
+    padding: 30px 22px;
+    background: #ffffff;
+
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+
+    box-shadow: 0 5px 20px rgba(15, 23, 42, 0.07);
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 28px rgba(15, 23, 42, 0.12);
+}
+
+.feature-card h3 {
+    color: #1d4ed8;
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.feature-card p {
+    color: #64748b;
+    font-size: 15px;
+}
+
+/* 7. Footer */
+footer {
+    padding: 22px 7%;
+    background: #172554;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 30px;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+/* 8. Forms */
+.form-container {
+    width: 90%;
+    max-width: 450px;
+    margin: 50px auto;
+    padding: 30px;
+
+    background: #ffffff;
+    border-radius: 12px;
+
+    box-shadow: 0 5px 25px rgba(15, 23, 42, 0.1);
+}
+
+.form-container h2 {
+    color: #172554;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 7px;
+    color: #334155;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+
+    background: #ffffff;
+    outline: none;
+
+    transition: border-color 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.form-container button {
+    width: 100%;
+    margin-top: 8px;
+}
+
+/* 9. Dashboard */
+.dashboard-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 35px auto;
+}
+
+.dashboard-container h1 {
+    color: #172554;
+    margin-bottom: 25px;
+}
+
+.dashboard-cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.dashboard-card {
+    padding: 25px;
+    background: #ffffff;
+    border-radius: 10px;
+
+    border-left: 5px solid #2563eb;
+    box-shadow: 0 4px 15px rgba(15, 23, 42, 0.07);
+}
+
+.dashboard-card h3 {
+    color: #64748b;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.dashboard-card p {
+    color: #1d4ed8;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* 10. Tables */
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    margin: 25px 0;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(15, 23, 42, 0.06);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+}
+
+table th,
+table td {
+    padding: 14px 16px;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+table th {
+    background: #1e3a8a;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+table tr:hover td {
+    background: #f1f5f9;
+}
+
+/* 11. Status Labels */
+.status {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.present {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.absent {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+/* 12. Messages */
+.success-message {
+    padding: 12px 15px;
+    margin-bottom: 18px;
+    border-radius: 6px;
+    background: #dcfce7;
+    color: #166534;
+}
+
+.error-message {
+    padding: 12px 15px;
+    margin-bottom: 18px;
+    border-radius: 6px;
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+/* 13. Utility Classes */
+.text-center {
+    text-align: center;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.page-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 35px auto;
+}
+
+/* 14. Responsive Design: Tablets */
+@media (max-width: 900px) {
+    .feature-container,
+    .dashboard-cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .hero {
+        min-height: 400px;
+        padding: 60px 5%;
+    }
+}
+
+/* 15. Responsive Design: Mobile */
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        padding: 18px 5%;
+        gap: 12px;
+    }
+
+    .logo {
+        font-size: 19px;
+        text-align: center;
+    }
+
+    .navbar nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero {
+        min-height: 350px;
+        padding: 45px 6%;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .features {
+        padding: 45px 5%;
+    }
+
+    .features h2 {
+        font-size: 27px;
+    }
+
+    .feature-container,
+    .dashboard-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-card {
+        padding: 25px 18px;
+    }
+
+    .form-container {
+        padding: 22px;
+        margin: 30px auto;
+    }
+
+    .dashboard-container,
+    .page-container {
+        width: 94%;
+    }
+}
